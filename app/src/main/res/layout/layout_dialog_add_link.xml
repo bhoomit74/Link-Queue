@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.bsoft.linkqueue.main.MainViewModel" />
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/circle2"
+        android:layout_width="230dp"
+        android:layout_height="190dp"
+        android:alpha="0.6"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/circle1"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:alpha="0.8"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/circle3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:alpha="0.8"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintEnd_toStartOf="@+id/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add" />
+
+    <View
+        android:id="@+id/circle4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:alpha="0.6"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintEnd_toEndOf="@+id/circle3"
+        app:layout_constraintStart_toEndOf="@+id/circle3"
+        app:layout_constraintTop_toTopOf="@+id/add" />
+
+    <View
+        android:id="@+id/circle5"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:alpha="0.9"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintEnd_toStartOf="@+id/circle3"
+        app:layout_constraintTop_toTopOf="@+id/add" />
+
+    <View
+        android:id="@+id/circle6"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:alpha="0.7"
+        android:background="@drawable/circle_yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/circle3"
+        app:layout_constraintStart_toEndOf="@+id/circle3" />
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/add_new_link"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autofillHints="@string/title"
+        android:background="@drawable/blue_background_rad_5"
+        android:elevation="10dp"
+        android:hint="@string/title"
+        android:inputType="textCapWords"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autofillHints="@string/link"
+        android:background="@drawable/blue_background_rad_5"
+        android:hint="@string/link"
+        android:inputType="text"
+        android:padding="15dp"
+        android:elevation="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/yellow_background_rad_5"
+        android:elevation="10dp"
+        android:onClick="@{()->mainViewModel.addLink()}"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/link" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+</layout>

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Link Queue</string>
+    <string name="add_link">addLink</string>
+    <string name="add_link_by_clicking_button_below">Add Link by clicking + button below.</string>
+    <string name="title">Title</string>
+    <string name="link">Link</string>
+    <string name="add">Add</string>
+    <string name="add_new_link">Add New Link</string>
+    <string name="total_links">links available</string>
+    <string name="total_link">link available</string>
+    <string name="delete">delete</string>
 </resources>
